@@ -27,11 +27,9 @@ const Grid = styled.div<{
   size?: GridSizeType;
 }>`
   display: grid;
-  width: 100%;
   align-items: start;
+  grid-auto-flow: column;
   ${({ size = GridSizeEnum.DEFAULT, type = GridTypeEnum.DEFAULT }) => css`
     grid-gap: ${GridSizeData[size]};
-
-    grid-template-columns: ${GridTypeData[type]};
   `}
 `;

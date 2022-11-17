@@ -1,8 +1,9 @@
 export enum PositionEnum {
-  DEFAULT = 'default',
+  DEFAULT = 'left',
   CENTER = 'center',
-  RIGHT = 'left',
+  RIGHT = 'right',
   JUSTIFY = 'justify',
+  SPACE_BETWEEN = 'space-between',
 }
 
 export type PositionType = `${PositionEnum}`;
@@ -12,4 +13,5 @@ export const PositionData = {
   [PositionEnum.CENTER]: 'center',
   [PositionEnum.RIGHT]: 'right',
   [PositionEnum.JUSTIFY]: 'justify',
+  [PositionEnum.SPACE_BETWEEN]: 'space-between',
 };

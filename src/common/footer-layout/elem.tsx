@@ -20,6 +20,7 @@ const Container = styled.div<{
   box-sizing: border-box;
   flex-direction: column;
   flex-wrap: nowrap;
+  padding: ${Spacing(16)} 0;
 
   ${({ background = ColorEnum.MAIN_WHITE }) => css`
     background-color: ${ColorData[background]};

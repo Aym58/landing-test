@@ -28,7 +28,6 @@ const Box = styled.div<{
   align?: PositionType;
 }>`
   width: 100%;
-  text-align: center;
   ${({
     background = ColorEnum.MAIN_WHITE,
     align = PositionEnum.DEFAULT,
