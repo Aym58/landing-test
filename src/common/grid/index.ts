@@ -1,1 +1,1 @@
-export { Elem as GridElement } from './elem';
+export { Elem as Grid } from './elem';

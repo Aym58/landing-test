@@ -14,5 +14,5 @@ const Container = styled.div`
   max-width: ${MAX_WIDTH};
   margin: 0 auto;
   box-sizing: border-box;
-  min-height: 100px; ;
+  min-height: 100px;
 `;
