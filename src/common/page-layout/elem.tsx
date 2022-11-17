@@ -3,8 +3,6 @@ import { IonContent } from '@ionic/react';
 
 import styled from 'styled-components';
 
-import { Spacing } from 'theme';
-
 export const Elem: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <IonContent>
