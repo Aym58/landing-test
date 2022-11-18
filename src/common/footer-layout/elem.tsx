@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 import styled, { css } from 'styled-components';
 
-import { Spacing, ColorEnum, ColorData, ColorType } from 'theme';
+import { PaddingSizeData, ColorEnum, ColorData, ColorType } from 'theme';
 
 export const Elem: React.FC<{
   children: ReactNode;
@@ -20,7 +20,7 @@ const Container = styled.div<{
   box-sizing: border-box;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: ${Spacing(16)} 0;
+  padding: ${PaddingSizeData.section};
 
   ${({ background = ColorEnum.MAIN_WHITE }) => css`
     background-color: ${ColorData[background]};

@@ -1,10 +1,10 @@
 import { isMobile } from 'react-device-detect';
 
-import { ContentBox } from 'common/content-box';
+import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
-
+import { TextElement } from 'common/text';
 import { Menu } from 'epic/menu';
 
 export const Component: React.FC = () => {
@@ -12,13 +12,15 @@ export const Component: React.FC = () => {
     <SectionLayout background="theme">
       <Menu />
       <ContentLayout>
-        <Grid type={isMobile ? 'one-column' : 'two-column'}>
-          <ContentBox background="theme">
-            <h1>Используй соцсети на максимум</h1>
+        <Grid type={isMobile ? 'column' : 'two-column'}>
+          <Content background="theme">
+            <TextElement size="default">
+              Используй соцсети на максимум
+            </TextElement>
             <p>Начти системно вести соцсети</p>
             <p>Вся работа с контентом в одном месте</p>
             <p>Управляй блогом как бизнесом</p>
-          </ContentBox>
+          </Content>
         </Grid>
       </ContentLayout>
     </SectionLayout>

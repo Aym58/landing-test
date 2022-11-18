@@ -1,6 +1,6 @@
 import { isMobile } from 'react-device-detect';
 
-import { ContentBox } from 'common/content-box';
+import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
@@ -11,8 +11,8 @@ export const Component: React.FC = () => {
     return (
       <SectionLayout background="theme">
         <ContentLayout>
-          <Grid type="one-column">
-            <Grid type="one-column" size="list">
+          <Grid type="column">
+            <Grid type="column" size="list">
               <h1>Главная идея Fluvi</h1>
               <p>
                 Мы собираем в 1м месте всех, кто профессионально работает с
@@ -30,9 +30,9 @@ export const Component: React.FC = () => {
     return (
       <SectionLayout>
         <ContentLayout>
-          <ContentBox background="theme">
+          <Content background="theme">
             <Grid type="two-column">
-              <Grid type="one-column" size="list">
+              <Grid type="column" size="list">
                 <h1>Главная идея Fluvi</h1>
                 <p>
                   Мы собираем в 1м месте всех, кто профессионально работает с
@@ -43,7 +43,7 @@ export const Component: React.FC = () => {
                 <IonButton>Попробовать бесплатно</IonButton>
               </Grid>
             </Grid>
-          </ContentBox>
+          </Content>
         </ContentLayout>
       </SectionLayout>
     );

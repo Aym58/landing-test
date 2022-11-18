@@ -1,6 +1,6 @@
 import { isMobile } from 'react-device-detect';
 
-import { ContentBox } from 'common/content-box';
+import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
@@ -8,14 +8,14 @@ import { Grid } from 'common/grid';
 export const Component: React.FC = () => {
   return (
     <SectionLayout>
-      <Grid type="one-column">
+      <Grid type="column">
         <ContentLayout>
-          <ContentBox align={isMobile ? 'left' : 'center'}>
+          <Content align={isMobile ? 'left' : 'center'}>
             <h1>FAQ - частые вопросы</h1>
-          </ContentBox>
+          </Content>
         </ContentLayout>
         <ContentLayout>
-          <Grid type="one-column" size="list">
+          <Grid type="column" size="list">
             <div>
               <h3>Сколько бесплатный период</h3>
               <p>

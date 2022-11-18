@@ -1,6 +1,6 @@
 import { isMobile } from 'react-device-detect';
 
-import { ContentBox } from 'common/content-box';
+import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
@@ -8,15 +8,15 @@ import { Grid } from 'common/grid';
 export const Component: React.FC = () => {
   return (
     <SectionLayout>
-      <Grid type="one-column">
+      <Grid type="column">
         <ContentLayout>
-          <ContentBox align={isMobile ? 'left' : 'center'}>
+          <Content align={isMobile ? 'left' : 'center'}>
             <h1>Как начать пользоваться Fluvi</h1>
-          </ContentBox>
+          </Content>
         </ContentLayout>
         <ContentLayout>
           {isMobile && (
-            <Grid type={'one-column'}>
+            <Grid type={'column'}>
               <div>
                 <p>Зарегистрироваться и добавить свой блог </p>
               </div>

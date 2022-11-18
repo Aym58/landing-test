@@ -1,6 +1,6 @@
 import { isMobile } from 'react-device-detect';
 
-import { ContentBox } from 'common/content-box';
+import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
@@ -9,21 +9,21 @@ export const Component: React.FC = () => {
   return (
     <SectionLayout>
       <ContentLayout>
-        <Grid type={isMobile ? 'one-column' : 'two-column'}>
-          <ContentBox>
-            <Grid type="one-column" size="list">
+        <Grid type={isMobile ? 'column' : 'two-column'}>
+          <Content>
+            <Grid type="column" size="list">
               <h1>Fluvi Roadmap</h1>
               <p>
                 Мы помогаем пользователям с двумя вещами: вести соцсети легче,
                 вести соцсети эффективнее
               </p>
             </Grid>
-          </ContentBox>
+          </Content>
         </Grid>
       </ContentLayout>
       <ContentLayout>
-        <Grid type={isMobile ? 'one-column' : 'three-column'}>
-          <Grid type="one-column" size="list">
+        <Grid type={isMobile ? 'column' : 'three-column'}>
+          <Grid type="column" size="list">
             <h3>Альфа версия</h3>
             <p>Октябрь 2022</p>
             <ul>
@@ -32,7 +32,7 @@ export const Component: React.FC = () => {
               <li>Возможность работать с командой</li>
             </ul>
           </Grid>
-          <Grid type="one-column" size="list">
+          <Grid type="column" size="list">
             <h3>Бета версия</h3>
             <p>Декабрь 2022</p>
             <ul>
@@ -41,7 +41,7 @@ export const Component: React.FC = () => {
               <li>10+ показателей блога в аналитикt</li>
             </ul>
           </Grid>
-          <Grid type="one-column" size="list">
+          <Grid type="column" size="list">
             <h3>Релиз</h3>
             <p>Февраль 2023</p>
             <ul>

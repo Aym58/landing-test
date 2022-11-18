@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 
 import styled, { css } from 'styled-components';
 
+import { isMobile } from 'react-device-detect';
+
 import {
   FontSizeEnum,
   FontSizeData,
@@ -9,6 +11,7 @@ import {
   FontWeightEnum,
   FontWeightData,
   FontWeightType,
+  MEDIA_BREAKPOINT,
 } from 'theme/size';
 
 import { ColorEnum, ColorData, ColorType } from 'theme';
@@ -47,6 +50,9 @@ const Text = styled.span<{
   lineThrough?: boolean;
   oneLine?: boolean;
 }>`
+  margin: 0;
+  font-family: 'PT Root UI';
+
   ${({
     size = FontSizeEnum.DEFAULT,
     color = ColorEnum.DEFAULT,
@@ -54,7 +60,16 @@ const Text = styled.span<{
     lineHeight = false,
     lineThrough = false,
   }) => css`
-    font-size: ${FontSizeData[size]};
+    @media (max-width: ${MEDIA_BREAKPOINT}) {
+      font-size: ${(size === FontSizeEnum.DEFAULT &&
+        FontSizeData[FontSizeEnum.DEFAULT_MOB]) ||
+      (size === FontSizeEnum.HEADER && FontSizeData[FontSizeEnum.HEADER_MOB]) ||
+      (size === FontSizeEnum.HEADER_SECONDARY &&
+        FontSizeData[FontSizeEnum.HEADER_SECONDARY_MOB])};
+    }
+    @media (min-width: ${MEDIA_BREAKPOINT}) {
+      font-size: ${FontSizeData[size]};
+    }
     font-weight: ${FontWeightData[type]};
     color: ${ColorData[color]};
     text-decoration: ${lineThrough ? 'line-through' : 'none'};
