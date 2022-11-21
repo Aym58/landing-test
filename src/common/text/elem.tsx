@@ -27,7 +27,16 @@ export const Elem: React.FC<{
   lineThrough?: boolean;
   oneLine?: boolean;
   className?: string;
-}> = ({ children, color, type, size, lineHeight, lineThrough, className }) => {
+}> = ({
+  children,
+  color,
+  type,
+  size,
+  lineHeight,
+  lineThrough,
+  className,
+  oneLine,
+}) => {
   return (
     <Text
       color={color}
@@ -36,6 +45,7 @@ export const Elem: React.FC<{
       lineHeight={lineHeight}
       lineThrough={lineThrough}
       className={className}
+      oneLine={oneLine}
     >
       {children}
     </Text>
@@ -59,13 +69,15 @@ const Text = styled.span<{
     type = FontWeightEnum.DEFAULT,
     lineHeight = false,
     lineThrough = false,
+    oneLine = false,
   }) => css`
     @media (max-width: ${MEDIA_BREAKPOINT}) {
       font-size: ${(size === FontSizeEnum.DEFAULT &&
         FontSizeData[FontSizeEnum.DEFAULT_MOB]) ||
       (size === FontSizeEnum.HEADER && FontSizeData[FontSizeEnum.HEADER_MOB]) ||
       (size === FontSizeEnum.HEADER_SECONDARY &&
-        FontSizeData[FontSizeEnum.HEADER_SECONDARY_MOB])};
+        FontSizeData[FontSizeEnum.HEADER_SECONDARY_MOB]) ||
+      (size === FontSizeEnum.BOOK && FontSizeData[FontSizeEnum.BOOK])};
     }
     @media (min-width: ${MEDIA_BREAKPOINT}) {
       font-size: ${FontSizeData[size]};
@@ -75,5 +87,9 @@ const Text = styled.span<{
     text-decoration: ${lineThrough ? 'line-through' : 'none'};
     line-height: ${lineHeight ? '1.5em' : '1.1em'};
     display: ${lineHeight ? 'inline' : 'block'};
+    overflow: ${oneLine ? 'hidden' : 'visible'};
+    text-overflow: ${oneLine ? 'ellipsis' : 'clip'};
+    white-space: ${oneLine ? 'nowrap' : 'pre-line'};
+    max-width: ${oneLine ? '220px' : '100%'};
   `}
 `;

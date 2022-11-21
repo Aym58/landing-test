@@ -10,12 +10,14 @@ import {
   GridTypeEnum,
   GridTypeData,
   GridTypeType,
+  Spacing,
 } from 'theme';
 
 export const Elem: React.FC<{
   type?: GridTypeType;
   size?: PaddingSizeType;
   children?: ReactNode;
+  spacing?: number;
 }> = ({ children, type, size }) => {
   return (
     <Grid type={type} size={size}>
@@ -27,21 +29,31 @@ export const Elem: React.FC<{
 const Grid = styled.div<{
   type?: GridTypeType;
   size?: PaddingSizeType;
+  spacing?: number;
 }>`
   display: grid;
   align-items: start;
   justify-items: start;
-  ${({ size = PaddingSizeEnum.DEFAULT, type = GridTypeEnum.DEFAULT }) => css`
+  ${({
+    size = PaddingSizeEnum.DEFAULT,
+    type = GridTypeEnum.DEFAULT,
+    spacing,
+  }) => css`
     width: ${type === GridTypeEnum.ROW ? 'auto' : '100%'};
     grid-auto-flow: ${type === GridTypeEnum.ROW ? GridTypeData[type] : 'row'};
-    grid-gap: ${PaddingSizeData[size]};
+
+    grid-gap: ${spacing ? Spacing(spacing) : PaddingSizeData[size]};
     grid-template-columns: ${GridTypeData[type]};
 
     @media (max-width: ${MEDIA_BREAKPOINT}) {
-      grid-template-columns: ${GridTypeData[GridTypeEnum.ONE_COL]};
+      grid-template-columns: ${type === GridTypeEnum.ROW
+        ? 'auto'
+        : GridTypeData[GridTypeEnum.ONE_COL]};
     }
     @media (min-width: ${MEDIA_BREAKPOINT}) {
-      grid-template-columns: ${GridTypeData[type]};
+      grid-template-columns: ${type === GridTypeEnum.ROW
+        ? 'auto'
+        : GridTypeData[type]};
     }
   `}
 `;

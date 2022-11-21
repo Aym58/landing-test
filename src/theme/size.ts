@@ -2,7 +2,7 @@ export const MAX_WIDTH = '1200px';
 
 export const MEDIA_BREAKPOINT = '768px';
 
-export const Spacing = (x: number): string => `${x * 2}px`;
+export const Spacing = (x: number): string => `${x * 4}px`;
 
 export enum FontSizeEnum {
   DEFAULT = 'default',
