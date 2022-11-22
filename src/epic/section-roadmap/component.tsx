@@ -4,21 +4,17 @@ import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
+import { Paragraph } from 'epic/paragraph';
 
 export const Component: React.FC = () => {
   return (
     <SectionLayout>
       <ContentLayout>
-        <Grid type={isMobile ? 'column' : 'two-column'}>
-          <Content>
-            <Grid type="column" size="list">
-              <h1>Fluvi Roadmap</h1>
-              <p>
-                Мы помогаем пользователям с двумя вещами: вести соцсети легче,
-                вести соцсети эффективнее
-              </p>
-            </Grid>
-          </Content>
+        <Grid type="two-column">
+          <Paragraph
+            header="Fluvi Roadmap"
+            text="Мы помогаем пользователям с двумя вещами: вести соцсети легче, вести соцсети эффективнее"
+          />
         </Grid>
       </ContentLayout>
       <ContentLayout>

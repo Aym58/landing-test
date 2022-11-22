@@ -6,23 +6,27 @@ export const Spacing = (x: number): string => `${x * 4}px`;
 
 export enum FontSizeEnum {
   DEFAULT = 'default',
-  DEFAULT_MOB = 'default-mobile',
+  DEFAULT_DESK = 'default-desk',
   HEADER = 'header',
-  HEADER_MOB = 'header-mobile',
+  HEADER_DESK = 'header-mobile',
   HEADER_SECONDARY = 'header-secondary',
-  HEADER_SECONDARY_MOB = 'header-secondary-mobile',
+  HEADER_SECONDARY_DESK = 'header-secondary-desk',
+  HEADER_TOP = 'header-top',
+  HEADER_TOP_DESK = 'header-top-desk',
   BOOK = 'book',
 }
 
 export type FontSizeType = `${FontSizeEnum}`;
 
 export const FontSizeData = {
-  [FontSizeEnum.DEFAULT]: '18px',
-  [FontSizeEnum.DEFAULT_MOB]: '14px',
-  [FontSizeEnum.HEADER]: '36px',
-  [FontSizeEnum.HEADER_MOB]: '20px',
-  [FontSizeEnum.HEADER_SECONDARY]: '24px',
-  [FontSizeEnum.HEADER_SECONDARY_MOB]: '18px',
+  [FontSizeEnum.DEFAULT]: '14px',
+  [FontSizeEnum.DEFAULT_DESK]: '18px',
+  [FontSizeEnum.HEADER]: '20px',
+  [FontSizeEnum.HEADER_DESK]: '36px',
+  [FontSizeEnum.HEADER_SECONDARY]: '18px',
+  [FontSizeEnum.HEADER_SECONDARY_DESK]: '24px',
+  [FontSizeEnum.HEADER_TOP]: '32px',
+  [FontSizeEnum.HEADER_TOP_DESK]: '54px',
   [FontSizeEnum.BOOK]: '12px',
 };
 

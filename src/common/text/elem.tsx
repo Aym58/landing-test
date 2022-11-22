@@ -71,15 +71,18 @@ const Text = styled.span<{
     lineThrough = false,
     oneLine = false,
   }) => css`
-    @media (max-width: ${MEDIA_BREAKPOINT}) {
-      font-size: ${(size === FontSizeEnum.DEFAULT &&
-        FontSizeData[FontSizeEnum.DEFAULT_MOB]) ||
-      (size === FontSizeEnum.HEADER && FontSizeData[FontSizeEnum.HEADER_MOB]) ||
-      (size === FontSizeEnum.HEADER_SECONDARY &&
-        FontSizeData[FontSizeEnum.HEADER_SECONDARY_MOB]) ||
-      (size === FontSizeEnum.BOOK && FontSizeData[FontSizeEnum.BOOK])};
-    }
     @media (min-width: ${MEDIA_BREAKPOINT}) {
+      font-size: ${(size === FontSizeEnum.DEFAULT &&
+        FontSizeData[FontSizeEnum.DEFAULT_DESK]) ||
+      (size === FontSizeEnum.HEADER &&
+        FontSizeData[FontSizeEnum.HEADER_DESK]) ||
+      (size === FontSizeEnum.HEADER_SECONDARY &&
+        FontSizeData[FontSizeEnum.HEADER_SECONDARY_DESK]) ||
+      (size === FontSizeEnum.BOOK && FontSizeData[FontSizeEnum.BOOK]) ||
+      (size === FontSizeEnum.HEADER_TOP &&
+        FontSizeData[FontSizeEnum.HEADER_TOP_DESK])};
+    }
+    @media (max-width: ${MEDIA_BREAKPOINT}) {
       font-size: ${FontSizeData[size]};
     }
     font-weight: ${FontWeightData[type]};

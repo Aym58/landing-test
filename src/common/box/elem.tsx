@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
 import {
+  MAX_WIDTH,
   ColorData,
   ColorEnum,
   ColorType,
@@ -55,9 +56,8 @@ const Box = styled.div<{
     borderColor = ColorEnum.BORDER,
     spacing,
   }) =>
-    border &&
     css`
-      border: 1px solid;
+      border: ${border ? '1px solid' : 'none'};
       border-color: ${ColorData[borderColor]};
       border-radius: calc(${PaddingSizeData[padding]} / 2);
       padding: ${spacing ? Spacing(spacing) : PaddingSizeData[padding]};

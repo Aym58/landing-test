@@ -1,28 +1,26 @@
-import { isMobile } from 'react-device-detect';
+import styled, { css } from 'styled-components';
 
-import { Content } from 'common/content-item';
-import { ContentLayout } from 'common/content-layout';
-import { SectionLayout } from 'common/section-layout';
-import { Grid } from 'common/grid';
-import { TextElement } from 'common/text';
 import { Menu } from 'epic/menu';
+import { SectionTop } from 'epic/section-top';
+
+import { ColorEnum, ColorData } from 'theme';
 
 export const Component: React.FC = () => {
   return (
-    <SectionLayout background="theme">
+    <Container>
       <Menu />
-      <ContentLayout>
-        <Grid type={isMobile ? 'column' : 'two-column'}>
-          <Content background="theme">
-            <TextElement size="default">
-              Используй соцсети на максимум
-            </TextElement>
-            <p>Начти системно вести соцсети</p>
-            <p>Вся работа с контентом в одном месте</p>
-            <p>Управляй блогом как бизнесом</p>
-          </Content>
-        </Grid>
-      </ContentLayout>
-    </SectionLayout>
+      <SectionTop />
+    </Container>
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: ${ColorData[ColorEnum.THEME]};
+`;

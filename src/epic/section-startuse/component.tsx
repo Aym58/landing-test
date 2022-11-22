@@ -4,7 +4,7 @@ import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
-import { IonButton } from '@ionic/react';
+import { Button } from 'common/button';
 
 export const Component: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ export const Component: React.FC = () => {
               с Fluvi
             </p>
             <p>Управляй блогом как бизнесом</p>
-            <IonButton>Попробовать бесплатно</IonButton>
+            <Button text="Попробовать бесплатно" />
           </Grid>
         </Content>
       </ContentLayout>
