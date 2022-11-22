@@ -3,7 +3,6 @@ import { IonPage } from '@ionic/react';
 import { SectionUse } from 'epic/header-section';
 
 import { PageLayout } from 'common/page-layout';
-import { Grid } from 'common/grid';
 
 import { SectionResult } from 'epic/section-result';
 import { SectionIdea } from 'epic/section-idea';
@@ -19,16 +18,14 @@ export const Page: React.FC = () => {
   return (
     <IonPage>
       <PageLayout>
-        <Grid size="section">
-          <SectionUse />
-          <SectionResult />
-          <SectionIdea />
-          <SectionRoadmap />
-          <SectionHowToStart />
-          <SectionFaq />
-          <SectionReviews />
-          <SectionStartUse />
-        </Grid>
+        <SectionUse />
+        <SectionResult />
+        <SectionIdea />
+        <SectionRoadmap />
+        <SectionHowToStart />
+        <SectionFaq />
+        <SectionReviews />
+        <SectionStartUse />
         <Footer />
       </PageLayout>
     </IonPage>

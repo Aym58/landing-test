@@ -1,5 +1,6 @@
 export {
   MAX_WIDTH,
+  MEDIA_BREAKPOINT,
   Spacing,
   FontSizeEnum,
   FontSizeData,
@@ -7,17 +8,13 @@ export {
   FontWeightEnum,
   FontWeightData,
   type FontWeightType,
+  PaddingSizeData,
+  PaddingSizeEnum,
+  type PaddingSizeType,
 } from './size';
 
 export { ColorEnum, ColorData, type ColorType } from './color';
 
-export {
-  GridSizeEnum,
-  GridSizeData,
-  type GridSizeType,
-  GridTypeEnum,
-  GridTypeData,
-  type GridTypeType,
-} from './grid';
+export { GridTypeEnum, GridTypeData, type GridTypeType } from './grid';
 
 export { PositionEnum, PositionData, type PositionType } from './position';

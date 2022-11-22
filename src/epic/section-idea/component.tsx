@@ -1,51 +1,69 @@
 import { isMobile } from 'react-device-detect';
 
-import { ContentBox } from 'common/content-box';
+import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
 import { IonButton } from '@ionic/react';
+import styled, { css } from 'styled-components';
+import { Button } from 'common/button';
+import { Paragraph } from 'epic/paragraph';
+import { Box } from 'common/box';
+
+import {
+  MEDIA_BREAKPOINT,
+  ColorData,
+  ColorEnum,
+  ColorType,
+  PositionEnum,
+  PositionData,
+  PositionType,
+  FontSizeData,
+  PaddingSizeType,
+  PaddingSizeEnum,
+  PaddingSizeData,
+  Spacing,
+} from 'theme';
 
 export const Component: React.FC = () => {
-  if (isMobile) {
-    return (
-      <SectionLayout background="theme">
-        <ContentLayout>
-          <Grid type="one-column">
-            <Grid type="one-column" size="list">
-              <h1>Главная идея Fluvi</h1>
-              <p>
-                Мы собираем в 1м месте всех, кто профессионально работает с
-                социальными сетями. Мы меняем подход к контент маркетингу и
-                ведению социальных сетей. Мы делаем его понятным, удобным и
-                эффективным.
-              </p>
-              <IonButton>Попробовать бесплатно</IonButton>
-            </Grid>
+  return (
+    <Container>
+      <Box background="theme" padding="section">
+        <Grid type="two-column">
+          <Grid type="column" size="content">
+            <Paragraph
+              color="white"
+              header="Главная идея Fluvi"
+              text="Мы собираем в одном месте всех, кто профессионально работает с социальными сетями. Мы меняем подход к контент маркетингу и ведению социальных сетей. Мы делаем его понятным, удобным и эффективным"
+            />
+            <Button text="Попробовать бесплатно" />
           </Grid>
-        </ContentLayout>
-      </SectionLayout>
-    );
-  } else {
-    return (
-      <SectionLayout>
-        <ContentLayout>
-          <ContentBox background="theme">
-            <Grid type="two-column">
-              <Grid type="one-column" size="list">
-                <h1>Главная идея Fluvi</h1>
-                <p>
-                  Мы собираем в 1м месте всех, кто профессионально работает с
-                  социальными сетями. Мы меняем подход к контент маркетингу и
-                  ведению социальных сетей. Мы делаем его понятным, удобным и
-                  эффективным.
-                </p>
-                <IonButton>Попробовать бесплатно</IonButton>
-              </Grid>
-            </Grid>
-          </ContentBox>
-        </ContentLayout>
-      </SectionLayout>
-    );
-  }
+        </Grid>
+      </Box>
+    </Container>
+  );
 };
+
+const Container = styled.div<{
+  background?: ColorType;
+}>`
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: ${PaddingSizeData.section};
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  ${({ background = ColorEnum.MAIN_WHITE }) => css`
+    background-color: ${ColorData[background]};
+    @media (min-width: ${MEDIA_BREAKPOINT}) {
+      background-color: ${ColorData[ColorEnum.MAIN_WHITE]};
+      padding: ${PaddingSizeData[PaddingSizeEnum.SECTION]};
+    }
+    @media (max-width: ${MEDIA_BREAKPOINT}) {
+      background-color: ${ColorData[ColorEnum.THEME]};
+      padding: 0;
+    }
+  `}
+`;

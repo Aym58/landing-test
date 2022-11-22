@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
 import {
+  MEDIA_BREAKPOINT,
   ColorData,
   ColorEnum,
   ColorType,
@@ -33,6 +34,12 @@ const Box = styled.div<{
     align = PositionEnum.DEFAULT,
   }) => css`
     background-color: ${ColorData[background]};
-    text-align: ${PositionData[align]};
+
+    @media (min-width: ${MEDIA_BREAKPOINT}) {
+      text-align: ${PositionData[align]};
+    }
+    @media (max-width: ${MEDIA_BREAKPOINT}) {
+      text-align: left;
+    }
   `}
 `;

@@ -1,24 +1,23 @@
 import { isMobile } from 'react-device-detect';
 
-import { ContentBox } from 'common/content-box';
+import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 
 import { FooterLayout } from 'common/footer-layout';
 
 import { Grid } from 'common/grid';
 import { Flex } from 'common/flex';
-import { GridItems } from 'common/grid-items';
 
 export const Component: React.FC = () => {
   return (
     <FooterLayout background="background-secondary">
       <ContentLayout>
-        <Grid type="one-column">
+        <Grid>
           <Flex justify="space-between">
             <div>
               <h1>Logo</h1>
             </div>
-            <GridItems>
+            <Grid type="row">
               <div>
                 <h3>icon</h3>
               </div>
@@ -28,10 +27,10 @@ export const Component: React.FC = () => {
               <div>
                 <h3>icon</h3>
               </div>
-            </GridItems>
+            </Grid>
           </Flex>
           <Flex justify="space-between">
-            <GridItems>
+            <Grid type="row">
               <div>
                 <h3>Регистрация</h3>
               </div>
@@ -44,19 +43,19 @@ export const Component: React.FC = () => {
               <div>
                 <h3>Privacy Policy</h3>
               </div>
-            </GridItems>
+            </Grid>
             <div>
               <h3>info@fluvi.net</h3>
             </div>
           </Flex>
-          <ContentBox background="background-secondary">
+          <Content background="background-secondary">
             <p>
               Copyrights Fluvi 2022. All Rights Reserved. League of Legends,
               Valorant, Teamfight Tactics and other games are registered
               trademarks of Riot Games, Inc. Fluvi is in no way affiliated with,
               associated with or endorsed by Riot Games, Inc.
             </p>
-          </ContentBox>
+          </Content>
         </Grid>
       </ContentLayout>
     </FooterLayout>
