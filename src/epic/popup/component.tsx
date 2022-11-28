@@ -1,15 +1,10 @@
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import { TextElement } from 'common/text';
 import { Box } from 'common/box';
 
-import {
-  MEDIA_BREAKPOINT,
-  PaddingSizeData,
-  PaddingSizeEnum,
-  Spacing,
-} from 'theme';
+import { MEDIA_BREAKPOINT, Spacing } from 'theme';
 
 export const Component: React.FC<{ name?: string; text?: string }> = ({
   name,
