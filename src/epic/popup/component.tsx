@@ -25,7 +25,7 @@ export const Component: React.FC<{ name?: string; text?: string }> = ({
         <Popup>
           <Box background="white">{text}</Box>
         </Popup>
-      )}{' '}
+      )}
     </Container>
   );
 };
@@ -45,6 +45,7 @@ const Popup = styled.div`
   z-index: 100;
 
   @media (max-width: ${MEDIA_BREAKPOINT}) {
+    left: -100px;
     width: 236px;
   }
   @media (min-width: ${MEDIA_BREAKPOINT}) {
