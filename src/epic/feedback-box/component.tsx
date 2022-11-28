@@ -5,6 +5,7 @@ import { Box } from 'common/box';
 import { Avatar } from 'common/avatar';
 import { ReactNode } from 'react';
 import { IconButton } from 'common/button-icon';
+import { LinkElement } from 'common/link';
 
 export const Component: React.FC<{
   avatar: string;
@@ -20,9 +21,14 @@ export const Component: React.FC<{
           <Avatar img={avatar} size={10} />
           <Grid size="icon">
             <GridRow size="icon">
-              <TextElement size="default" color="default" type="bold">
+              <LinkElement
+                to="#"
+                color="default"
+                hoverColor="theme"
+                type="bold"
+              >
                 {name}
-              </TextElement>
+              </LinkElement>
               <IconButton src={icon} />
             </GridRow>
             <TextElement size="book" color="secondary">

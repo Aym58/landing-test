@@ -1,6 +1,7 @@
 export const MAX_WIDTH = '1200px';
+export const MAX_WIDTH_MOB = '640px';
 
-export const MEDIA_BREAKPOINT = '769px';
+export const MEDIA_BREAKPOINT = '897px';
 
 export const Spacing = (x: number): string => `${x * 4}px`;
 

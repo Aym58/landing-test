@@ -33,7 +33,6 @@ const Container = styled.div`
   @media (max-width: ${MEDIA_BREAKPOINT}) {
     grid-gap: ${PaddingSizeData[PaddingSizeEnum.LIST]};
   }
-
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     grid-gap: ${PaddingSizeData[PaddingSizeEnum.DEFAULT]};
   }

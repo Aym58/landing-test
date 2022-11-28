@@ -21,13 +21,11 @@ export const Component: React.FC = () => {
             <Content align="center">
               <Logo />
             </Content>
-
             <Content align="center">
               <TextElement size="header" type="bold" color="white">
                 Начать пользоваться
               </TextElement>
             </Content>
-
             <Content align="center">
               <TextElement
                 size="default"
@@ -39,7 +37,6 @@ export const Component: React.FC = () => {
                 вместе с Fluvi
               </TextElement>
             </Content>
-
             <Content align="center">
               <Button text="Попробовать бесплатно" color="theme" />
             </Content>
@@ -53,6 +50,7 @@ export const Component: React.FC = () => {
 const Container = styled.div`
   height: 100%;
   width: 100%;
+
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     padding: ${Spacing(16)} 0;
     background: url(${imgDesk}),

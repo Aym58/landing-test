@@ -7,7 +7,7 @@ import { Flex } from 'common/flex';
 import { Logo } from 'common/logo';
 import { GridRow } from 'common/grid-row';
 import { IconButton } from 'common/button-icon';
-import { Link } from 'common/link';
+import { LinkElement } from 'common/link';
 
 import { ReactComponent as Youtube } from 'assets/icons/youtube.svg';
 import { ReactComponent as Twitter } from 'assets/icons/twitter.svg';
@@ -40,26 +40,24 @@ export const Component: React.FC = () => {
             </Flex>
             <Flex justify="space-between" align="end">
               <GridContainer>
-                <Link to="#" color="default" type="medium">
+                <LinkElement to="#" color="default" type="medium">
                   Регистрация
-                </Link>
-                <Link to="#" color="default" type="medium">
+                </LinkElement>
+                <LinkElement to="#" color="default" type="medium">
                   Aвторизация
-                </Link>
-                <Link to="#" color="default" type="medium">
+                </LinkElement>
+                <LinkElement to="#" color="default" type="medium">
                   Terms Of Use
-                </Link>
-                <Link to="#" color="default" type="medium">
+                </LinkElement>
+                <LinkElement to="#" color="default" type="medium">
                   Privacy Policy
-                </Link>
+                </LinkElement>
               </GridContainer>
-
-              <Link to="#" color="default" type="medium">
+              <LinkElement to="#" color="default" type="medium">
                 info@fluvi.net
-              </Link>
+              </LinkElement>
             </Flex>
             <Divider />
-
             <TextElement color="secondary" lineHeight>
               Copyrights Fluvi 2022. All Rights Reserved. League of Legends,
               Valorant, Teamfight Tactics and other games are registered
@@ -78,7 +76,7 @@ const GridContainer = styled.div`
   align-items: start;
   justify-items: start;
   width: 'auto';
-  grid-gap: ${PaddingSizeData[PaddingSizeEnum.CONTENT]};
+  grid-gap: ${PaddingSizeData[PaddingSizeEnum.DEFAULT]};
   @media (max-width: ${MEDIA_BREAKPOINT}) {
     grid-template-columns: 1fr 1fr;
   }

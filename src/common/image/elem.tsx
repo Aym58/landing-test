@@ -23,7 +23,6 @@ const Container = styled.div<{
   width?: string;
   height?: string;
 }>`
-  align-items: stretch;
   display: flex;
   margin: 0;
   padding: 0;

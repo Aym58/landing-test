@@ -19,19 +19,21 @@ import { ColorData, ColorEnum, ColorType } from 'theme';
 
 export const Elem: React.FC<{
   to: string;
-  tid?: string;
-  tvalue?: object;
+
   color?: ColorType;
+  hoverColor?: ColorType;
   type?: FontWeightType;
   size?: FontSizeType;
   children?: ReactNode;
-  lineHeight?: boolean;
-  underline?: boolean;
-  oneLine?: boolean;
-  className?: string;
-}> = ({ to, children, color, type, size }) => {
+}> = ({ to, children, color, type, size, hoverColor }) => {
   return (
-    <Container to={to} color={color} size={size} type={type}>
+    <Container
+      to={to}
+      color={color}
+      size={size}
+      type={type}
+      hoverColor={hoverColor}
+    >
       {children}
     </Container>
   );
@@ -42,21 +44,24 @@ const Container = styled(Link)<{
   size?: FontSizeType;
   color?: ColorType;
   type?: FontWeightType;
+  hoverColor?: ColorType;
 }>`
   margin: 0;
   font-family: 'PT Root UI';
   text-decoration: none;
-  &:hover,
-  &:focus {
-    font-weight: ${FontWeightData[FontWeightEnum.BOLD]};
-  }
   ${({
     size = FontSizeEnum.DEFAULT,
     color = ColorEnum.DEFAULT,
+    hoverColor,
     type = FontWeightEnum.MEDIUM,
   }) => css`
     font-weight: ${FontWeightData[type]};
     color: ${ColorData[color]};
+    &:hover,
+    &:focus {
+      font-weight: ${FontWeightData[FontWeightEnum.BOLD]};
+      color: ${hoverColor ? ColorData[hoverColor] : ColorData[color]};
+    }
     @media (min-width: ${MEDIA_BREAKPOINT}) {
       font-size: ${(size === FontSizeEnum.DEFAULT && Spacing(4.5)) ||
       (size === FontSizeEnum.HEADER && Spacing(9)) ||

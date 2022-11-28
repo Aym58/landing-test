@@ -5,6 +5,7 @@ import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
 import { TextElement } from 'common/text';
 import { Image } from 'common/image';
+import { Popup } from 'epic/popup';
 
 import {
   MEDIA_BREAKPOINT,
@@ -12,9 +13,6 @@ import {
   PaddingSizeEnum,
   Spacing,
 } from 'theme';
-
-import { Popup } from 'epic/popup';
-
 import bottle from 'assets/images/bottle.png';
 
 export const Component: React.FC = () => {
@@ -46,11 +44,9 @@ export const Component: React.FC = () => {
               <ImageDesk>
                 <Image img="steps-horizontal-desk.png" width="100%" />
               </ImageDesk>
-
               <ImageMob>
                 <Image img="steps-vertical-mob.png" height="100%" />
               </ImageMob>
-
               <TextTemplate area="block_1">
                 <Grid type="column" size="list">
                   <TextElement size="header-secondary" type="bold">
@@ -64,7 +60,6 @@ export const Component: React.FC = () => {
                   <TextElement>• Возможность работать с командой</TextElement>
                 </Grid>
               </TextTemplate>
-
               <TextTemplate area="block_2">
                 <Grid type="column" size="list">
                   <TextElement size="header-secondary" type="bold">
@@ -76,7 +71,6 @@ export const Component: React.FC = () => {
                   <TextElement>• 10+ показателей блога в аналитике</TextElement>
                 </Grid>
               </TextTemplate>
-
               <TextTemplate area="block_3">
                 <Grid type="column" size="list">
                   <TextElement size="header-secondary" type="bold">
@@ -110,7 +104,6 @@ const ParagraphContainer = styled.div`
   @media (max-width: ${MEDIA_BREAKPOINT}) {
     grid-gap: ${PaddingSizeData[PaddingSizeEnum.LIST]};
   }
-
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     grid-gap: ${PaddingSizeData[PaddingSizeEnum.DEFAULT]};
   }
@@ -154,16 +147,16 @@ const ImageDesk = styled.div`
   height: 14px;
   grid-area: image_desk;
   margin: 0 auto;
+
   @media (max-width: ${MEDIA_BREAKPOINT}) {
     display: none;
   }
 `;
 
 const ImageMob = styled.div`
-  position: absolute;
   grid-area: image_mob;
-  width: 12px;
-  height: 56%;
+  width: auto;
+  height: 100%;
   margin: 0 auto;
 
   @media (min-width: ${MEDIA_BREAKPOINT}) {
@@ -174,6 +167,7 @@ const ImageMob = styled.div`
 const Container = styled.div`
   height: 100%;
   width: 100%;
+
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     padding: ${Spacing(8)} 0;
     background-image: url(${bottle});
