@@ -1,12 +1,12 @@
+import styled from 'styled-components';
+
 import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
 import { TextElement } from 'common/text';
-
 import { Button } from 'common/button';
 import { Image } from 'common/image';
-import styled from 'styled-components';
 
 export const Component: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ export const Component: React.FC = () => {
                   • Управляй блогом как бизнесом
                 </TextElement>
               </Grid>
-              <Button text="Попробовать бесплатно" />
+              <Button text="Попробовать бесплатно" color="theme" />
             </Grid>
           </Content>
           <ImageContainer>

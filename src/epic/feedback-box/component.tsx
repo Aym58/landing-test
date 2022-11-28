@@ -2,10 +2,8 @@ import { Grid } from 'common/grid';
 import { GridRow } from 'common/grid-row';
 import { TextElement } from 'common/text';
 import { Box } from 'common/box';
-
 import { Avatar } from 'common/avatar';
 import { ReactNode } from 'react';
-
 import { IconButton } from 'common/button-icon';
 
 export const Component: React.FC<{

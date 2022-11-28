@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
-import { ReactComponent as MenuIcon } from 'assets/images/burger-menu.svg';
-
 import { ContentLayout } from 'common/content-layout';
-
 import { GridRow } from 'common/grid-row';
 import { Logo } from 'common/logo';
 import { SectionLayout } from 'common/section-layout';
-
 import { IconButton } from 'common/button-icon';
 import { Link } from 'common/link';
+
 import { MEDIA_BREAKPOINT } from 'theme';
+import { ReactComponent as MenuIcon } from 'assets/images/burger-menu.svg';
 
 export const Component: React.FC = () => {
   return (

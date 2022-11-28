@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import styled from 'styled-components';
 
 import { TextElement } from 'common/text';
 import { Box } from 'common/box';
-import styled from 'styled-components';
+
 import {
   MEDIA_BREAKPOINT,
   PaddingSizeData,

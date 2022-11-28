@@ -1,19 +1,17 @@
+import styled from 'styled-components';
+
 import { ContentLayout } from 'common/content-layout';
-
 import { FooterLayout } from 'common/footer-layout';
-
 import { Grid } from 'common/grid';
 import { Flex } from 'common/flex';
 import { Logo } from 'common/logo';
 import { GridRow } from 'common/grid-row';
 import { IconButton } from 'common/button-icon';
+import { Link } from 'common/link';
 
 import { ReactComponent as Youtube } from 'assets/icons/youtube.svg';
 import { ReactComponent as Twitter } from 'assets/icons/twitter.svg';
 import { ReactComponent as Telegram } from 'assets/icons/telegram.svg';
-
-import { Link } from 'common/link';
-import styled from 'styled-components';
 
 import {
   MEDIA_BREAKPOINT,

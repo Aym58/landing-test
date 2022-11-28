@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import { IonContent } from '@ionic/react';
-
 import styled from 'styled-components';
 
 export const Elem: React.FC<{ children: ReactNode }> = ({ children }) => {

@@ -1,10 +1,11 @@
+import styled, { css } from 'styled-components';
+
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
-
 import { TextElement } from 'common/text';
 import { Image } from 'common/image';
-import styled, { css } from 'styled-components';
+
 import {
   MEDIA_BREAKPOINT,
   PaddingSizeData,

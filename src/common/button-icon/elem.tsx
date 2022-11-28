@@ -1,11 +1,8 @@
 import React, { ReactNode } from 'react';
-
 import styled from 'styled-components';
 
 import { FontSizeType } from 'theme/size';
-
 import { ColorType } from 'theme';
-
 import { Icon } from 'common/icon';
 
 export const Elem: React.FC<{

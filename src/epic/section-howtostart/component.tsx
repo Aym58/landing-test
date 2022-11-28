@@ -1,9 +1,10 @@
+import styled, { css } from 'styled-components';
+
 import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
 import { TextElement } from 'common/text';
-import styled, { css } from 'styled-components';
 import { Image } from 'common/image';
 
 import smile_1 from 'assets/images/smile_1.png';

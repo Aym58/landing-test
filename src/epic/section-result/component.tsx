@@ -3,6 +3,7 @@ import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
 import { FeatureBox } from 'epic/feature-box';
 import { Paragraph } from 'epic/paragraph';
+
 import { MEDIA_BREAKPOINT, Spacing } from 'theme';
 
 import img from 'assets/images/crown.png';
