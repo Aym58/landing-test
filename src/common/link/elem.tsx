@@ -1,20 +1,17 @@
 import React, { ReactNode } from 'react';
 
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
 import {
-  FontSizeEnum,
-  FontSizeData,
   FontSizeType,
   FontWeightEnum,
   FontWeightData,
   FontWeightType,
-  MEDIA_BREAKPOINT,
 } from 'theme/size';
 
-import { ColorEnum, ColorData, ColorType } from 'theme';
+import { ColorType } from 'theme';
 import { TextElement } from 'common/text';
 
 export const Elem: React.FC<{

@@ -2,8 +2,6 @@ import React, { ReactNode } from 'react';
 
 import styled, { css } from 'styled-components';
 
-import { isMobile } from 'react-device-detect';
-
 import {
   FontSizeEnum,
   FontSizeData,

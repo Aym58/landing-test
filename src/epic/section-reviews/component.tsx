@@ -8,7 +8,7 @@ import { ReactComponent as Youtube } from 'assets/icons/youtube-small.svg';
 import { ReactComponent as Telegram } from 'assets/icons/telegram-small.svg';
 import img from 'assets/images/star.png';
 import styled from 'styled-components';
-import { ColorData, ColorEnum, MEDIA_BREAKPOINT, Spacing } from 'theme';
+import { MEDIA_BREAKPOINT, Spacing } from 'theme';
 
 export const Component: React.FC = () => {
   return (

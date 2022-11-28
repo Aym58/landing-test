@@ -1,14 +1,11 @@
-import { isMobile } from 'react-device-detect';
-
-import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
-import { SectionLayout } from 'common/section-layout';
+
 import { Grid } from 'common/grid';
-import { IonButton } from '@ionic/react';
-import styled, { css } from 'styled-components';
+
+import styled from 'styled-components';
 import { Button } from 'common/button';
 import { Paragraph } from 'epic/paragraph';
-import { Box } from 'common/box';
+
 import { Image } from 'common/image';
 
 import {
@@ -16,11 +13,6 @@ import {
   ColorData,
   ColorEnum,
   ColorType,
-  PositionEnum,
-  PositionData,
-  PositionType,
-  FontSizeData,
-  PaddingSizeType,
   PaddingSizeEnum,
   PaddingSizeData,
   Spacing,
@@ -29,7 +21,6 @@ import {
 
 import backgroundDesk from 'assets/images/background-idea-desk.png';
 import backgroundMob from 'assets/images/background-idea-mob.png';
-import imgMob from 'assets/images/background-idea-mob.png';
 
 export const Component: React.FC = () => {
   return (

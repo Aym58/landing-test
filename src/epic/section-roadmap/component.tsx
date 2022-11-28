@@ -1,10 +1,7 @@
-import { isMobile } from 'react-device-detect';
-
-import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
-import { Paragraph } from 'epic/paragraph';
+
 import { TextElement } from 'common/text';
 import { Image } from 'common/image';
 import styled, { css } from 'styled-components';

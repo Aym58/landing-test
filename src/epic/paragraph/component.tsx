@@ -1,7 +1,5 @@
-import { Grid } from 'common/grid';
 import { TextElement } from 'common/text';
 
-import { Content } from 'common/content-item';
 import {
   ColorType,
   MEDIA_BREAKPOINT,

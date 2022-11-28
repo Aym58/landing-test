@@ -1,7 +1,5 @@
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 
-import { Grid } from 'common/grid';
-import { GridRow } from 'common/grid-row';
 import { TextElement } from 'common/text';
 import { Box } from 'common/box';
 import styled from 'styled-components';

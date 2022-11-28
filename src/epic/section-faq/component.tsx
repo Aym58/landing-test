@@ -1,10 +1,8 @@
-import { isMobile } from 'react-device-detect';
-
 import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
-import { Paragraph } from 'epic/paragraph';
+
 import { DropdownBox } from 'epic/dropdown-box';
 import { TextElement } from 'common/text';
 import styled from 'styled-components';

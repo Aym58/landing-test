@@ -13,7 +13,7 @@ export const Component: React.FC<{
   icon?: string;
   header?: string;
   text?: string;
-}> = ({ icon, header, text }) => {
+}> = ({ header, text }) => {
   const [open, setOpen] = useState(false);
 
   const openHandler = () => {

@@ -1,8 +1,6 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import styled, { css } from 'styled-components';
-
-import { Spacing } from 'theme';
 
 export const Elem: React.FC<{
   img: string;

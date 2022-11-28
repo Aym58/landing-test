@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { Menu } from 'epic/menu';
 import { SectionTop } from 'epic/section-top';
@@ -39,5 +39,3 @@ const Container = styled.div`
     ),
     ${ColorData[ColorEnum.THEME]};
 `;
-
-//   ${ColorData[ColorEnum.THEME]};

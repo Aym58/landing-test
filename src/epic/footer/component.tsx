@@ -1,6 +1,3 @@
-import { isMobile } from 'react-device-detect';
-
-import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 
 import { FooterLayout } from 'common/footer-layout';
@@ -22,10 +19,6 @@ import {
   MEDIA_BREAKPOINT,
   PaddingSizeData,
   PaddingSizeEnum,
-  PaddingSizeType,
-  GridTypeEnum,
-  GridTypeData,
-  GridTypeType,
   Spacing,
   ColorEnum,
   ColorData,

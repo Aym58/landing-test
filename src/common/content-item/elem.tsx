@@ -4,8 +4,6 @@ import styled, { css } from 'styled-components';
 
 import {
   MEDIA_BREAKPOINT,
-  ColorData,
-  ColorEnum,
   ColorType,
   PositionEnum,
   PositionData,

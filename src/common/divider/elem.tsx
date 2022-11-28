@@ -1,21 +1,8 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import styled, { css } from 'styled-components';
 
-import {
-  MAX_WIDTH,
-  ColorData,
-  ColorEnum,
-  ColorType,
-  PositionEnum,
-  PositionData,
-  PositionType,
-  FontSizeData,
-  PaddingSizeType,
-  PaddingSizeEnum,
-  PaddingSizeData,
-  Spacing,
-} from 'theme';
+import { ColorData, ColorEnum, ColorType } from 'theme';
 
 export const Elem: React.FC<{
   color?: ColorType;

@@ -1,11 +1,9 @@
 import React, { ReactNode } from 'react';
 
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import {
   MEDIA_BREAKPOINT,
-  ColorEnum,
-  ColorData,
   ColorType,
   PaddingSizeData,
   PaddingSizeEnum,
@@ -39,8 +37,4 @@ const Container = styled.div<{
     padding-right: ${PaddingSizeData[PaddingSizeEnum.CONTENT]};
     padding-left: ${PaddingSizeData[PaddingSizeEnum.CONTENT]};
   }
-  /*
-  ${({ background = ColorEnum.MAIN_WHITE }) => css`
-    background-color: ${ColorData[background]};
-  `}*/
 `;
