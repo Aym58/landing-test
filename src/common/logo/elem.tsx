@@ -1,4 +1,5 @@
 import { ReactComponent as Logo } from 'assets/images/logo.svg';
+import { ReactComponent as LogoOrange } from 'assets/images/logo-orange.svg';
 
 import React, { ReactNode } from 'react';
 
@@ -8,10 +9,12 @@ import { Spacing } from 'theme';
 
 export const Elem: React.FC<{
   size?: number;
-}> = ({ size = 10 }) => {
+  themed?: boolean;
+}> = ({ size = 10, themed = false }) => {
   return (
     <Container size={size}>
-      <Logo />
+      {!themed && <Logo />}
+      {themed && <LogoOrange />}
     </Container>
   );
 };

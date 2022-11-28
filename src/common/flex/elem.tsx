@@ -9,19 +9,18 @@ export const Elem: React.FC<{
   children?: ReactNode;
 }> = ({ children, justify, align }) => {
   return (
-    <Grid justify={justify} align={align}>
+    <Container justify={justify} align={align}>
       {children}
-    </Grid>
+    </Container>
   );
 };
 
-const Grid = styled.div<{
+const Container = styled.div<{
   justify?: PositionType;
   align?: PositionType;
 }>`
   display: flex;
   width: 100%;
-  align-items: start;
   ${({ align = PositionEnum.CENTER, justify = PositionEnum.CENTER }) => css`
     align-items: ${PositionData[align]};
     justify-content: ${PositionData[justify]};

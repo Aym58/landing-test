@@ -6,23 +6,33 @@ import { Spacing } from 'theme';
 
 export const Elem: React.FC<{
   img: string;
-
-  size?: number;
-}> = ({ size, img }) => {
+  size?: string;
+  width?: string;
+  height?: string;
+}> = ({ width = 'auto', height = 'auto', img }) => {
   return (
-    <Container size={size}>
-      <img src={require(`assets/images/${img}`)} alt="iphone" width="600px" />
+    <Container width={width} height={height}>
+      <img
+        src={require(`assets/images/${img}`)}
+        alt="iphone"
+        width={width}
+        height={height}
+      />
     </Container>
   );
 };
 
 const Container = styled.div<{
-  size?: number;
+  width?: string;
+  height?: string;
 }>`
-  border-radius: 50%;
-  ${({ size }) =>
+  align-items: stretch;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  ${({ width = 'auto', height = 'auto' }) =>
     css`
-      width: ${size};
-      height: ${size};
+      width: ${width};
+      height: ${height};
     `};
 `;

@@ -1,4 +1,17 @@
 @font-face {
   font-family: 'PT Root UI';
   src: url('assets/fonts/PT-Root-UI_Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('assets/fonts/PT-Root-UI_Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('assets/fonts/PT-Root-UI_Bold.ttf');
+  font-weight: 700;
 }

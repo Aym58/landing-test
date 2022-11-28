@@ -27,11 +27,9 @@ export const Elem: React.FC<{
     if (onClick) onClick(e);
   };
   return (
-    <>
-      <Button onClick={handleClick}>
-        <Icon src={src} />
-      </Button>
-    </>
+    <Button onClick={handleClick}>
+      <Icon src={src} />
+    </Button>
   );
 };
 
@@ -44,6 +42,8 @@ const Button = styled.button<{
   textColor?: ColorType;
   backgroundColor?: ColorType;
 }>`
+  align-self: center;
+
   transition: none;
   border: none;
   background: none;

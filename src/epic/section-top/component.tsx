@@ -6,6 +6,7 @@ import { TextElement } from 'common/text';
 
 import { Button } from 'common/button';
 import { Image } from 'common/image';
+import styled from 'styled-components';
 
 export const Component: React.FC = () => {
   return (
@@ -31,9 +32,21 @@ export const Component: React.FC = () => {
               <Button text="Попробовать бесплатно" />
             </Grid>
           </Content>
-          <Image img="iPhone-desktop.png" />
+          <ImageContainer>
+            <Image img="iPhone-desktop.png" />
+          </ImageContainer>
         </Grid>
       </ContentLayout>
     </SectionLayout>
   );
 };
+
+const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: -32px;
+  bottom: -32px;
+`;

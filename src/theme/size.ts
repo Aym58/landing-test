@@ -1,6 +1,6 @@
 export const MAX_WIDTH = '1200px';
 
-export const MEDIA_BREAKPOINT = '768px';
+export const MEDIA_BREAKPOINT = '769px';
 
 export const Spacing = (x: number): string => `${x * 4}px`;
 
@@ -49,13 +49,15 @@ export const PaddingSizeData = {
 };
 
 export enum FontWeightEnum {
-  DEFAULT = 'default',
+  REGULAR = 'regular',
+  MEDIUM = 'medium',
   BOLD = 'bold',
 }
 
 export type FontWeightType = `${FontWeightEnum}`;
 
 export const FontWeightData = {
-  [FontWeightEnum.DEFAULT]: 'regular',
-  [FontWeightEnum.BOLD]: 'bold',
+  [FontWeightEnum.REGULAR]: 400,
+  [FontWeightEnum.MEDIUM]: 500,
+  [FontWeightEnum.BOLD]: 700,
 };

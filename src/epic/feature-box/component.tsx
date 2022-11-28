@@ -1,4 +1,5 @@
 import { Grid } from 'common/grid';
+import { GridRow } from 'common/grid-row';
 import { TextElement } from 'common/text';
 import { Box } from 'common/box';
 
@@ -10,12 +11,12 @@ export const Component: React.FC<{
   return (
     <Box border padding="default">
       <Grid size="list">
-        <Grid size="icon" type="row">
+        <GridRow size="icon">
           <TextElement size="header-secondary">{icon}</TextElement>
           <TextElement size="header-secondary" color="theme" type="bold">
             {header}
           </TextElement>
-        </Grid>
+        </GridRow>
         <TextElement size="default" lineHeight>
           {text}
         </TextElement>
