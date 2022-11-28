@@ -49,7 +49,7 @@ export const Component: React.FC = () => {
               </ImageMob>
               <TextTemplate area="block_1">
                 <Grid type="column" size="list">
-                  <TextElement size="header-secondary" type="bold">
+                  <TextElement size="header-secondary" type="medium">
                     Альфа версия
                   </TextElement>
                   <TextElement color="secondary">Октябрь 2022</TextElement>
@@ -62,7 +62,7 @@ export const Component: React.FC = () => {
               </TextTemplate>
               <TextTemplate area="block_2">
                 <Grid type="column" size="list">
-                  <TextElement size="header-secondary" type="bold">
+                  <TextElement size="header-secondary" type="medium">
                     Бета версия
                   </TextElement>
                   <TextElement color="secondary">Декабрь 2022</TextElement>
@@ -73,7 +73,7 @@ export const Component: React.FC = () => {
               </TextTemplate>
               <TextTemplate area="block_3">
                 <Grid type="column" size="list">
-                  <TextElement size="header-secondary" type="bold">
+                  <TextElement size="header-secondary" type="medium">
                     Релиз
                   </TextElement>
                   <TextElement color="secondary">Февраль 2023</TextElement>
