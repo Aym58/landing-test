@@ -18,7 +18,7 @@ export type FontSizeType = `${FontSizeEnum}`;
 export const FontSizeData = {
   [FontSizeEnum.DEFAULT]: '14px',
   [FontSizeEnum.HEADER]: '20px',
-  [FontSizeEnum.HEADER_SECONDARY]: '18px',
+  [FontSizeEnum.HEADER_SECONDARY]: '16px',
   [FontSizeEnum.HEADER_TOP]: '32px',
   [FontSizeEnum.BOOK]: '12px',
 };

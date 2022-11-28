@@ -50,7 +50,7 @@ const Popup = styled.div`
   z-index: 100;
 
   @media (max-width: ${MEDIA_BREAKPOINT}) {
-    width: 287px;
+    width: 236px;
   }
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     left: 0;

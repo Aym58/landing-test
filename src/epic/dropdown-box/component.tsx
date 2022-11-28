@@ -25,7 +25,7 @@ export const Component: React.FC<{
       <Box border padding="default">
         <Grid size="list">
           <Flex align="center" justify="space-between">
-            <TextElement size="header-secondary" color="default" type="bold">
+            <TextElement size="header-secondary" color="default" type="medium">
               {header}
             </TextElement>
             <IconButton onClick={openHandler} src={<UpIcon />} />
