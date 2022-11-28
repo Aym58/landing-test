@@ -41,7 +41,7 @@ export const Component: React.FC = () => {
                 <Image img="steps-vertical-desk.png" height="100%" />
               </ImageDesk>
               <TextTemplate area="text_1">
-                <TextElement type="medium" lineHeight>
+                <TextElement size="header-secondary" type="medium" lineHeight>
                   Зарегистрироваться и добавить свой блог
                 </TextElement>
               </TextTemplate>
@@ -49,7 +49,7 @@ export const Component: React.FC = () => {
                 <Image img="01.png" />
               </ImageTemplate>
               <TextTemplate area="text_2">
-                <TextElement type="medium" lineHeight>
+                <TextElement size="header-secondary" type="medium" lineHeight>
                   Изучить базу знаний, как пользоваться функциями Fluvi
                 </TextElement>
               </TextTemplate>
@@ -57,7 +57,7 @@ export const Component: React.FC = () => {
                 <Image img="02.png" />
               </ImageTemplate>
               <TextTemplate area="text_3">
-                <TextElement type="medium" lineHeight>
+                <TextElement size="header-secondary" type="medium" lineHeight>
                   Создать задачу, контент стратегию или план, записать идею,
                   редактировать текст и т.д.
                 </TextElement>
@@ -66,7 +66,7 @@ export const Component: React.FC = () => {
                 <Image img="03.png" />
               </ImageTemplate>
               <TextTemplate area="text_4">
-                <TextElement type="medium" lineHeight>
+                <TextElement size="header-secondary" type="medium" lineHeight>
                   Увидеть все процессы и показатели своего блога
                 </TextElement>
               </TextTemplate>
@@ -74,7 +74,7 @@ export const Component: React.FC = () => {
                 <Image img="04.png" />
               </ImageTemplate>
               <TextTemplate area="text_5">
-                <TextElement type="medium" lineHeight>
+                <TextElement size="header-secondary" type="medium" lineHeight>
                   Каждый месяц улучшать результат с помощью наших инструментов
                 </TextElement>
               </TextTemplate>
@@ -163,7 +163,7 @@ const ImageMobile = styled.div<{
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  transform: translateY(${Spacing(8)});
+  transform: translateY(${Spacing(6)});
   ${({ area }) =>
     css`
       grid-area: ${area};
