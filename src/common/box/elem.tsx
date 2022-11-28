@@ -3,14 +3,12 @@ import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
 import {
-  MAX_WIDTH,
   ColorData,
   ColorEnum,
   ColorType,
   PositionEnum,
   PositionData,
   PositionType,
-  FontSizeData,
   PaddingSizeType,
   PaddingSizeEnum,
   PaddingSizeData,

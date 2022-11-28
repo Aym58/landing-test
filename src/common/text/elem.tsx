@@ -2,8 +2,6 @@ import React, { ReactNode } from 'react';
 
 import styled, { css } from 'styled-components';
 
-import { isMobile } from 'react-device-detect';
-
 import {
   FontSizeEnum,
   FontSizeData,
@@ -24,8 +22,9 @@ export const Elem: React.FC<{
   size?: FontSizeType;
   children?: ReactNode;
   lineHeight?: boolean;
-  lineThrough?: boolean;
+  underline?: boolean;
   oneLine?: boolean;
+  inline?: boolean;
   className?: string;
 }> = ({
   children,
@@ -33,7 +32,7 @@ export const Elem: React.FC<{
   type,
   size,
   lineHeight,
-  lineThrough,
+  underline,
   className,
   oneLine,
 }) => {
@@ -43,9 +42,8 @@ export const Elem: React.FC<{
       size={size}
       type={type}
       lineHeight={lineHeight}
-      lineThrough={lineThrough}
+      underline={underline}
       className={className}
-      oneLine={oneLine}
     >
       {children}
     </Text>
@@ -57,7 +55,7 @@ const Text = styled.span<{
   color?: ColorType;
   type?: FontWeightType;
   lineHeight?: boolean;
-  lineThrough?: boolean;
+  underline?: boolean;
   oneLine?: boolean;
 }>`
   margin: 0;
@@ -66,9 +64,9 @@ const Text = styled.span<{
   ${({
     size = FontSizeEnum.DEFAULT,
     color = ColorEnum.DEFAULT,
-    type = FontWeightEnum.DEFAULT,
+    type = FontWeightEnum.REGULAR,
     lineHeight = false,
-    lineThrough = false,
+    underline = false,
     oneLine = false,
   }) => css`
     @media (min-width: ${MEDIA_BREAKPOINT}) {
@@ -87,7 +85,7 @@ const Text = styled.span<{
     }
     font-weight: ${FontWeightData[type]};
     color: ${ColorData[color]};
-    text-decoration: ${lineThrough ? 'line-through' : 'none'};
+    text-decoration: ${underline ? 'underline' : 'none'};
     line-height: ${lineHeight ? '1.5em' : '1.1em'};
     display: ${lineHeight ? 'inline' : 'block'};
     overflow: ${oneLine ? 'hidden' : 'visible'};

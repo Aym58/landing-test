@@ -1,21 +1,10 @@
 import React, { ReactNode } from 'react';
 
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-import { TextElement } from 'common/text';
+import { FontSizeType } from 'theme/size';
 
-import {
-  FontSizeEnum,
-  FontSizeData,
-  FontSizeType,
-  FontWeightEnum,
-  FontWeightData,
-  FontWeightType,
-  MEDIA_BREAKPOINT,
-} from 'theme/size';
-
-import { ColorEnum, ColorData, ColorType } from 'theme';
-import { IonButton } from '@ionic/react';
+import { ColorType } from 'theme';
 
 import { Icon } from 'common/icon';
 
@@ -27,11 +16,9 @@ export const Elem: React.FC<{
     if (onClick) onClick(e);
   };
   return (
-    <>
-      <Button onClick={handleClick}>
-        <Icon src={src} />
-      </Button>
-    </>
+    <Button onClick={handleClick}>
+      <Icon src={src} />
+    </Button>
   );
 };
 
@@ -44,6 +31,8 @@ const Button = styled.button<{
   textColor?: ColorType;
   backgroundColor?: ColorType;
 }>`
+  align-self: center;
+
   transition: none;
   border: none;
   background: none;

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { Menu } from 'epic/menu';
 import { SectionTop } from 'epic/section-top';
@@ -22,5 +22,20 @@ const Container = styled.div`
   box-sizing: border-box;
   flex-direction: column;
   flex-wrap: nowrap;
-  background-color: ${ColorData[ColorEnum.THEME]};
+  background: radial-gradient(
+      circle at top right,
+      ${ColorData[ColorEnum.THEME_GRADIENT_LIGHT]},
+      transparent 400px
+    ),
+    radial-gradient(
+      400px 400px at left,
+      ${ColorData[ColorEnum.THEME_GRADIENT_LIGHT]},
+      transparent 400px
+    ),
+    radial-gradient(
+      at bottom,
+      ${ColorData[ColorEnum.THEME_GRADIENT_DARK]},
+      transparent 500px
+    ),
+    ${ColorData[ColorEnum.THEME]};
 `;

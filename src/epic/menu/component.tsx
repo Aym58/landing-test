@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import { ReactComponent as MenuIcon } from 'assets/images/burger-menu.svg';
 
 import { ContentLayout } from 'common/content-layout';
-import { PaddingSizeEnum, PaddingSizeData } from 'theme';
-import { TextElement } from 'common/text';
+
 import { GridRow } from 'common/grid-row';
 import { Logo } from 'common/logo';
 import { SectionLayout } from 'common/section-layout';
-import { Icon } from 'common/icon';
+
 import { IconButton } from 'common/button-icon';
+import { Link } from 'common/link';
 import { MEDIA_BREAKPOINT } from 'theme';
 
 export const Component: React.FC = () => {
@@ -20,10 +20,14 @@ export const Component: React.FC = () => {
           <Logo />
           <GridRow size="default">
             <MenuContainer>
-              <TextElement>Регистрация</TextElement>
+              <Link to="#" color="white">
+                Регистрация
+              </Link>
             </MenuContainer>
             <MenuContainer>
-              <TextElement>Вход</TextElement>
+              <Link to="#" color="white">
+                Вход
+              </Link>
             </MenuContainer>
             <IconButton src={<MenuIcon />} />
           </GridRow>

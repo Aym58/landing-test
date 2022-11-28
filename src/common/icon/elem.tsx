@@ -1,11 +1,6 @@
-import { FindAllByText } from '@testing-library/react';
-import { ReactComponent as Logo } from 'assets/images/logo.svg';
-
 import React, { ReactNode } from 'react';
 
 import styled, { css } from 'styled-components';
-
-import { Spacing } from 'theme';
 
 export const Elem: React.FC<{
   src: ReactNode;

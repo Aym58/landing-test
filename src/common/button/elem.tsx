@@ -1,18 +1,10 @@
 import React, { ReactNode } from 'react';
 
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { TextElement } from 'common/text';
 
-import {
-  FontSizeEnum,
-  FontSizeData,
-  FontSizeType,
-  FontWeightEnum,
-  FontWeightData,
-  FontWeightType,
-  MEDIA_BREAKPOINT,
-} from 'theme/size';
+import { FontSizeType, MEDIA_BREAKPOINT } from 'theme/size';
 
 import { ColorEnum, ColorData, ColorType } from 'theme';
 import { IonButton } from '@ionic/react';

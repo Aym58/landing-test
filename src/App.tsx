@@ -16,12 +16,15 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+import { BrowserRouter } from 'react-router-dom';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <Page />
+    <BrowserRouter>
+      <Page />
+    </BrowserRouter>
   </IonApp>
 );
 

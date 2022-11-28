@@ -1,8 +1,13 @@
 import React, { ReactNode } from 'react';
 
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-import { ColorEnum, ColorData, ColorType, PaddingSizeData } from 'theme';
+import {
+  MEDIA_BREAKPOINT,
+  ColorType,
+  PaddingSizeData,
+  PaddingSizeEnum,
+} from 'theme';
 
 export const Elem: React.FC<{
   children: ReactNode;
@@ -18,11 +23,18 @@ const Container = styled.div<{
   width: 100%;
   margin: 0 auto;
   padding: ${PaddingSizeData.section};
+
   box-sizing: border-box;
   flex-direction: column;
   flex-wrap: nowrap;
 
-  ${({ background = ColorEnum.MAIN_WHITE }) => css`
-    background-color: ${ColorData[background]};
-  `}
+  @media (min-width: ${MEDIA_BREAKPOINT}) {
+    padding: ${PaddingSizeData[PaddingSizeEnum.SECTION]};
+  }
+  @media (max-width: ${MEDIA_BREAKPOINT}) {
+    padding-top: ${PaddingSizeData[PaddingSizeEnum.SECTION]};
+    padding-bottom: ${PaddingSizeData[PaddingSizeEnum.SECTION]};
+    padding-right: ${PaddingSizeData[PaddingSizeEnum.CONTENT]};
+    padding-left: ${PaddingSizeData[PaddingSizeEnum.CONTENT]};
+  }
 `;
