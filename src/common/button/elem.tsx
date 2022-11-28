@@ -1,13 +1,10 @@
 import React, { ReactNode } from 'react';
-
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { IonButton } from '@ionic/react';
 
 import { TextElement } from 'common/text';
-
 import { FontSizeType, MEDIA_BREAKPOINT } from 'theme/size';
-
 import { ColorEnum, ColorData, ColorType } from 'theme';
-import { IonButton } from '@ionic/react';
 
 export const Elem: React.FC<{
   children?: ReactNode;
@@ -22,26 +19,13 @@ export const Elem: React.FC<{
   className?: string;
   backgroundColor?: ColorType;
   fill?: boolean;
-}> = ({
-  children,
-  tid,
-  text,
-  color,
-  textColor,
-  icon,
-  size,
-  disabled,
-  onClick,
-  className,
-  backgroundColor,
-  fill,
-}) => {
+}> = ({ text, color, onClick, backgroundColor }) => {
   const handleClick = (e: any) => {
     if (onClick) onClick(e);
   };
   return (
-    <Button onClick={handleClick}>
-      <TextElement color="theme" type="bold">
+    <Button onClick={handleClick} backgroundColor={backgroundColor}>
+      <TextElement color={color} type="bold">
         {text}
       </TextElement>
     </Button>
@@ -50,26 +34,28 @@ export const Elem: React.FC<{
 
 const Button = styled(IonButton)<{
   disabled?: boolean;
-  customColor?: ColorType;
-  size?: FontSizeType;
-  icon?: boolean;
-  fill?: boolean;
   textColor?: ColorType;
   backgroundColor?: ColorType;
 }>`
+  ${({ backgroundColor = ColorEnum.MAIN_WHITE }) => css`
   text-transform: none;
   --box-shadow: none;
   height: 42px;
   margin: 0;
   width: 100%;
-  --border-radius: 10px;
-  --background: ${ColorData[ColorEnum.MAIN_WHITE]};
   color: ${ColorData[ColorEnum.THEME]};
-
+  --border-radius: 10px;
+  --background: ${ColorData[backgroundColor]};
+  :hover {
+    --background: ${ColorData[backgroundColor]};
+  }
+  :active {
+    --background: ${ColorData[backgroundColor]};
+  }
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     width: 248px;
   }
   @media (max-width: ${MEDIA_BREAKPOINT}) {
     width: 100%;
-  }
+    `}
 `;

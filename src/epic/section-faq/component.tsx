@@ -1,13 +1,13 @@
+import styled from 'styled-components';
+
 import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
 import { Grid } from 'common/grid';
-
-import { DropdownBox } from 'epic/dropdown-box';
 import { TextElement } from 'common/text';
-import styled from 'styled-components';
-import { MEDIA_BREAKPOINT, Spacing } from 'theme';
+import { DropdownBox } from 'epic/dropdown-box';
 
+import { MEDIA_BREAKPOINT, Spacing } from 'theme';
 import circle from 'assets/images/circle.png';
 import circle2 from 'assets/images/circle2.png';
 

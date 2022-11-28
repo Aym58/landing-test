@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 import { Content } from 'common/content-item';
 import { ContentLayout } from 'common/content-layout';
 import { SectionLayout } from 'common/section-layout';
@@ -5,7 +7,7 @@ import { Grid } from 'common/grid';
 import { Button } from 'common/button';
 import { Logo } from 'common/logo';
 import { TextElement } from 'common/text';
-import styled from 'styled-components';
+
 import { ColorEnum, ColorData, Spacing, MEDIA_BREAKPOINT } from 'theme';
 import imgDesk from 'assets/images/background-startuse-desk.png';
 import imgMob from 'assets/images/background-startuse-desk.png';
@@ -39,7 +41,7 @@ export const Component: React.FC = () => {
             </Content>
 
             <Content align="center">
-              <Button text="Попробовать бесплатно" />
+              <Button text="Попробовать бесплатно" color="theme" />
             </Content>
           </Grid>
         </ContentLayout>

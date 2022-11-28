@@ -1,9 +1,8 @@
+import React from 'react';
+import styled, { css } from 'styled-components';
+
 import { ReactComponent as Logo } from 'assets/images/logo.svg';
 import { ReactComponent as LogoOrange } from 'assets/images/logo-orange.svg';
-
-import React from 'react';
-
-import styled, { css } from 'styled-components';
 
 export const Elem: React.FC<{
   size?: number;

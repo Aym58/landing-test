@@ -1,11 +1,9 @@
-import { ContentLayout } from 'common/content-layout';
-
-import { Grid } from 'common/grid';
-
 import styled from 'styled-components';
+
+import { ContentLayout } from 'common/content-layout';
+import { Grid } from 'common/grid';
 import { Button } from 'common/button';
 import { Paragraph } from 'epic/paragraph';
-
 import { Image } from 'common/image';
 
 import {
@@ -37,7 +35,7 @@ export const Component: React.FC = () => {
                 header="Главная идея Fluvi"
                 text="Мы собираем в одном месте всех, кто профессионально работает с социальными сетями. Мы меняем подход к контент маркетингу и ведению социальных сетей. Мы делаем его понятным, удобным и эффективным"
               />
-              <Button text="Попробовать бесплатно" />
+              <Button text="Попробовать бесплатно" color="theme" />
             </Grid>
             <ImageContainer>
               <Image img="analysis.png" />

@@ -1,12 +1,12 @@
-import { TextElement } from 'common/text';
+import styled from 'styled-components';
 
+import { TextElement } from 'common/text';
 import {
   ColorType,
   MEDIA_BREAKPOINT,
   PaddingSizeData,
   PaddingSizeEnum,
 } from 'theme';
-import styled from 'styled-components';
 
 export const Component: React.FC<{
   color?: ColorType;

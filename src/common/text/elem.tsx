@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-
 import styled, { css } from 'styled-components';
 
 import {
@@ -10,6 +9,7 @@ import {
   FontWeightData,
   FontWeightType,
   MEDIA_BREAKPOINT,
+  Spacing,
 } from 'theme/size';
 
 import { ColorEnum, ColorData, ColorType } from 'theme';
@@ -70,15 +70,11 @@ const Text = styled.span<{
     oneLine = false,
   }) => css`
     @media (min-width: ${MEDIA_BREAKPOINT}) {
-      font-size: ${(size === FontSizeEnum.DEFAULT &&
-        FontSizeData[FontSizeEnum.DEFAULT_DESK]) ||
-      (size === FontSizeEnum.HEADER &&
-        FontSizeData[FontSizeEnum.HEADER_DESK]) ||
-      (size === FontSizeEnum.HEADER_SECONDARY &&
-        FontSizeData[FontSizeEnum.HEADER_SECONDARY_DESK]) ||
+      font-size: ${(size === FontSizeEnum.DEFAULT && Spacing(4.5)) ||
+      (size === FontSizeEnum.HEADER && Spacing(9)) ||
+      (size === FontSizeEnum.HEADER_SECONDARY && Spacing(5)) ||
       (size === FontSizeEnum.BOOK && FontSizeData[FontSizeEnum.BOOK]) ||
-      (size === FontSizeEnum.HEADER_TOP &&
-        FontSizeData[FontSizeEnum.HEADER_TOP_DESK])};
+      (size === FontSizeEnum.HEADER_TOP && Spacing(14))};
     }
     @media (max-width: ${MEDIA_BREAKPOINT}) {
       font-size: ${FontSizeData[size]};
