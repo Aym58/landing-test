@@ -5,7 +5,7 @@ import { GridRow } from 'common/grid-row';
 import { Logo } from 'common/logo';
 import { SectionLayout } from 'common/section-layout';
 import { IconButton } from 'common/button-icon';
-import { Link } from 'common/link';
+import { LinkElement } from 'common/link';
 
 import { MEDIA_BREAKPOINT } from 'theme';
 import { ReactComponent as MenuIcon } from 'assets/images/burger-menu.svg';
@@ -18,14 +18,14 @@ export const Component: React.FC = () => {
           <Logo />
           <GridRow size="default">
             <MenuContainer>
-              <Link to="#" color="white">
+              <LinkElement to="#" color="white">
                 Регистрация
-              </Link>
+              </LinkElement>
             </MenuContainer>
             <MenuContainer>
-              <Link to="#" color="white">
+              <LinkElement to="#" color="white">
                 Вход
-              </Link>
+              </LinkElement>
             </MenuContainer>
             <IconButton src={<MenuIcon />} />
           </GridRow>

@@ -1,5 +1,6 @@
 export {
   MAX_WIDTH,
+  MAX_WIDTH_MOB,
   MEDIA_BREAKPOINT,
   Spacing,
   FontSizeEnum,

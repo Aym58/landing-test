@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import styled from 'styled-components';
 
 import { TextElement } from 'common/text';
@@ -30,7 +30,7 @@ export const Component: React.FC<{ name?: string; text?: string }> = ({
         <Popup>
           <Box background="white">{text}</Box>
         </Popup>
-      )}
+      )}{' '}
     </Container>
   );
 };
@@ -48,11 +48,10 @@ const Popup = styled.div`
   height: auto;
   overflow: hidden;
   z-index: 100;
+
   @media (max-width: ${MEDIA_BREAKPOINT}) {
-    margin-left: ${PaddingSizeData[PaddingSizeEnum.DEFAULT]};
     width: 287px;
   }
-
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     left: 0;
     width: 400px;

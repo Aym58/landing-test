@@ -37,58 +37,47 @@ export const Component: React.FC = () => {
               <ImageMobile area="image">
                 <Image img="steps-vertical.png" />
               </ImageMobile>
-
               <ImageDesk area="image">
                 <Image img="steps-vertical-desk.png" height="100%" />
               </ImageDesk>
-
               <TextTemplate area="text_1">
                 <TextElement type="medium" lineHeight>
                   Зарегистрироваться и добавить свой блог
                 </TextElement>
               </TextTemplate>
-
               <ImageTemplate area="image_1">
                 <Image img="01.png" />
               </ImageTemplate>
-
               <TextTemplate area="text_2">
                 <TextElement type="medium" lineHeight>
                   Изучить базу знаний, как пользоваться функциями Fluvi
                 </TextElement>
               </TextTemplate>
-
               <ImageTemplate area="image_2" justify="right">
                 <Image img="02.png" />
               </ImageTemplate>
-
               <TextTemplate area="text_3">
                 <TextElement type="medium" lineHeight>
                   Создать задачу, контент стратегию или план, записать идею,
                   редактировать текст и т.д.
                 </TextElement>
               </TextTemplate>
-
               <ImageTemplate area="image_3">
                 <Image img="03.png" />
               </ImageTemplate>
-
               <TextTemplate area="text_4">
                 <TextElement type="medium" lineHeight>
                   Увидеть все процессы и показатели своего блога
                 </TextElement>
               </TextTemplate>
-
               <ImageTemplate area="image_4" justify="right">
                 <Image img="04.png" />
               </ImageTemplate>
-
               <TextTemplate area="text_5">
                 <TextElement type="medium" lineHeight>
                   Каждый месяц улучшать результат с помощью наших инструментов
                 </TextElement>
               </TextTemplate>
-
               <ImageTemplate area="image_5">
                 <Image img="05.png" />
               </ImageTemplate>
@@ -103,6 +92,7 @@ export const Component: React.FC = () => {
 const GridContainer = styled.div`
   display: grid;
   grid-gap: ${PaddingSizeData[PaddingSizeEnum.DEFAULT]};
+
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     grid-template-columns: 1fr ${Spacing(3)} 1fr;
     grid-template-rows: auto;
@@ -156,7 +146,6 @@ const ImageTemplate = styled.div<{
   height: 100%;
   display: flex;
   align-items: center;
-
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     min-height: ${Spacing(14)};
   }

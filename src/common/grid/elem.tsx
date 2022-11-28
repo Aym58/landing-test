@@ -43,11 +43,8 @@ const Grid = styled.div<{
   }) => css`
     width: ${noStretch ? 'auto' : '100%'};
     grid-auto-flow: 'row';
-
     grid-gap: ${spacing ? Spacing(spacing) : PaddingSizeData[size]};
-
     grid-template-columns: ${GridTypeData[type]};
-
     @media (max-width: ${MEDIA_BREAKPOINT}) {
       grid-template-columns: ${GridTypeData[GridTypeEnum.ONE_COL]};
     }
