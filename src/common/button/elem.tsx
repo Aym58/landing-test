@@ -46,12 +46,10 @@ const Button = styled(IonButton)<{
   color: ${ColorData[ColorEnum.THEME]};
   --border-radius: 10px;
   --background: ${ColorData[backgroundColor]};
-  :hover {
-    --background: ${ColorData[backgroundColor]};
-  }
-  :active {
-    --background: ${ColorData[backgroundColor]};
-  }
+  --background-activated: ${ColorData[backgroundColor]};
+  --background-focused: ${ColorData[backgroundColor]};
+  --background-hover: ${ColorData[backgroundColor]};
+
   @media (min-width: ${MEDIA_BREAKPOINT}) {
     width: 248px;
   }
